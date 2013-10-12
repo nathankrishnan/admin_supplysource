@@ -1,4 +1,8 @@
-admin_supplysource
-==================
+SupplySource Dashboard
+================================
 
-Admin web application
+1) User Authentication
+2) Create Models for products
+	- Produce
+	- Meat
+	- Dairy
