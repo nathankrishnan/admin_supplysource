@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131012215852) do
+ActiveRecord::Schema.define(version: 20131015053953) do
+
+  create_table "meats", force: true do |t|
+    t.string   "name"
+    t.integer  "supplier_name"
+    t.string   "thumbnail"
+    t.boolean  "ab_free"
+    t.boolean  "hormone_free"
+    t.boolean  "wild_caught"
+    t.boolean  "farm_grown"
+    t.boolean  "artificial_color"
+    t.text     "description"
+    t.text     "growth_conditions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email"

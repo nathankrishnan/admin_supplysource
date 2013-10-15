@@ -1,0 +1,71 @@
+<h1 class="dash-head">Create Product</h1>
+
+<!--creates form that sends data to the 'ProductController' controller-->
+<%= form_for :meat, url: meats_path do |f| %>
+
+	<fieldset>
+		<legend>Add a New Meat Product</legend>
+
+		<!-- NAME -->
+		<div class="form-group">
+			<%= f.label :name, class: "col-lg-2 control-label" %>
+			<%= f.text_field :name, class: "form-control", placeholder: "Enter product name" %>
+		</div>
+
+
+		<!-- SUPPLIER -->
+		<div class="form-group">
+			<%= f.label :supplier_name, class: "col-lg-2 control-label" %>
+			<!--
+			f.collection_select :supplier_name, Supplier.all.collect {|s| [ s.name, s.id ]}, include_blank: true
+			-->
+		</div>
+
+		<!-- THUMBNAIL -->
+		<div class="form-group">
+			<%= f.label :thumbnail, class: "col-lg-2 control-label" %>
+			<%= f.file_field :thumbnail, class: "file-upload" %>
+		</div>
+
+		<div class="form-group">
+
+			<!-- ANTIBIOTIC FREE -->
+			<%= f.label :ab_free, class: "col-lg-2 control-label" %>
+			<%= f.check_box :ab_free %>
+
+			<!-- HORMONE FREE -->
+			<%= f.label :hormone_free, class: "col-lg-2 control-label" %>
+			<%= f.check_box :hormone_free %>
+
+			<!-- WILD CAUGHT -->
+			<%= f.label :wild_caught, class: "col-lg-2 control-label" %>
+			<%= f.check_box :wild_caught %>
+
+			<!-- FARM GROWN -->
+			<%= f.label :farm_grown, class: "col-lg-2 control-label" %>
+			<%= f.check_box :farm_grown %>
+
+			<!-- ARTIFICIAL COLOR -->
+			<%= f.label :artificial_color, class: "col-lg-2 control-label" %>
+			<%= f.check_box :artificial_color %>
+
+		</div>
+
+		<!-- DESCRIPTION -->
+		<div class="form-group">
+			<%= f.label :description, class: "col-lg-2 control-label" %>
+			<%= f.text_area :description, rows: 3 %>
+		</div>
+
+		<!-- GROWTH CONDITIONS -->
+		<div class="form-group">
+			<%= f.label :growth_conditions, class: "col-lg-2 control-label" %>
+			<%= f.text_area :growth_conditions, rows: 3 %>
+		</div>
+
+
+		<%= f.submit "Add Product", class: "btn btn-lg btn-default" %>
+
+	</fieldset>
+
+<% end %>
