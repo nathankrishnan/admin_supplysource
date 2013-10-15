@@ -1,13 +1,18 @@
 class MeatsController < ApplicationController
 
 	def new
+		@meat = Meat.new
 	end
 
 	def create
 		@meat = Meat.new(meat_params)
  
-		@meat.save
-		redirect_to @meat
+		if(@meat.save)
+			redirect_to @meat
+		else
+			render 'new'
+		end
+		
 	end
 
 	# show a specific meat

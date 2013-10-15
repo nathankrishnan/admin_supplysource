@@ -22,3 +22,12 @@ SupplySource Dashboard
 		Slide Out side menu
 
 
+================================
+
+Possible Features:
+
+Wastage Map
+
+		a heat map of the store that shows where the most wastage is coming from (so that the manager can adjust prices accordingly). We can accomplish this with data from Supermarket API, which gives location info
+
+		
