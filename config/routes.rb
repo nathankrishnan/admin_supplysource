@@ -5,7 +5,7 @@ AdminSupplysource::Application.routes.draw do
   resources :meats
 
   # set a root path
-  root "sessions#new"
+  root "static_pages#home"
 
   # match requests to controller actions
   match '/sign_up', to: 'users#new',  via: 'get'
