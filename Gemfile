@@ -11,6 +11,10 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+# bootstrap
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
