@@ -8,26 +8,77 @@
 </head>
 <body>
 
-<div id="user_nav">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
 
-<!-- checks to see if the user is logged by seeing if current_user returns true -->
-	<% if current_user %>
-		Logged in as <%= current_user.email %>
-		<%= link_to "Log out", logout_path %>
-	<% else %>
-		<%= link_to "Sign up", sign_up_path %> or
-		<%= link_to "Log in", login_path %>
-	<% end %>
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+		<%= link_to "SUPPLYSOURCE", root_url, class: "navbar-brand" %>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+           	
+           	<!-- checks to see if the user is logged by seeing if current_user returns true -->
+          	<% if current_user %>
+
+	          	<li  class="dropdown">
+	          		<%= link_to "#", class: "dropdown-toggle", data:{toggle: "dropdown"}  do%>Products <b class="caret"></b><%end%>
+	          		<ul class="dropdown-menu">
+	          			<li><%= link_to "Meat", meats_path %></li>
+	          			<li><%= link_to "Produce", "#" %></li>
+	          			<li><%= link_to "Dairy", "#" %></li>
+	          		</ul>
+	          	</li>
+	           	<li  class="dropdown">
+	           		<%= link_to "#", class: "dropdown-toggle", data:{toggle: "dropdown"}  do%>Suppliers <b class="caret"></b><%end%>
+	           		<ul class="dropdown-menu">
+	           			<li><%= link_to "Whole Foods", "#" %></li>
+	          			<li><%= link_to "Trader Joes", "#" %></li>
+	          		</ul>
+	           	</li>
+	           	<li  class="dropdown">
+	           		<%= link_to "#", class: "dropdown-toggle", data:{toggle: "dropdown"}  do%>Metrics <b class="caret"></b><%end%>
+	           		<ul class="dropdown-menu">
+	           			<li><%= link_to "Wastage", "#" %></li>
+	           			<li><%= link_to "Score Breakdown", "#" %></li>
+	          			<li><%= link_to "Prices", "#" %></li>
+	          		</ul>
+	           	</li>
+
+				<li>
+					<%= link_to "Log out", logout_path %>
+				</li>
+
+			<!-- navbar to display if user is not logged in -->
+			<% else %>
+
+				<li><%= link_to "Sign up", new_user_path %></li>
+				<li><%= link_to "Log in", login_path %></li>
+
+			<% end %>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+	</div>
+</nav>
 
 
-</div>
-
+<div class="container">
 
 <% flash.each do|name, msg| %>
 	<%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
 
 <%= yield %>
+
+</div>
+
 
 </body>
 </html>
