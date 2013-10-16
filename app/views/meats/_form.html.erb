@@ -26,9 +26,9 @@
 
 		<!-- SUPPLIER -->
 		<div class="form-group">
-			<%= f.label :supplier_name, class: "col-lg-2 control-label" %>
+			<%= f.label :supplier_id, class: "col-lg-2 control-label" %>
 			<div class="col-lg-10">
-				<%= f.collection_select :supplier_name, Supplier.all, :id, :name, include_blank: true %>
+				<%= f.collection_select :supplier_id, Supplier.all, :id, :name, include_blank: true %>
 			</div>
 		</div>
 

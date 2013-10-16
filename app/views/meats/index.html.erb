@@ -18,7 +18,7 @@
     <tr>
       <td><%= meat.name %></td>
       <td><%= meat.description %></td>
-      <td><%= Supplier.find_by(id: meat.supplier_name).name %></td>
+      <td><%= meat.supplier.name %></td>
       <td><%= meat.ab_free %></td>
       <td><%= meat.hormone_free %></td>
       <td><%= link_to 'Show', meat_path(meat.id) %></td>
