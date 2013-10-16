@@ -35,13 +35,7 @@
 	          			<li><%= link_to "Dairy", "#" %></li>
 	          		</ul>
 	          	</li>
-	           	<li  class="dropdown">
-	           		<%= link_to "#", class: "dropdown-toggle", data:{toggle: "dropdown"}  do%>Suppliers <b class="caret"></b><%end%>
-	           		<ul class="dropdown-menu">
-	           			<li><%= link_to "Whole Foods", "#" %></li>
-	          			<li><%= link_to "Trader Joes", "#" %></li>
-	          		</ul>
-	           	</li>
+
 	           	<li  class="dropdown">
 	           		<%= link_to "#", class: "dropdown-toggle", data:{toggle: "dropdown"}  do%>Metrics <b class="caret"></b><%end%>
 	           		<ul class="dropdown-menu">
@@ -50,6 +44,10 @@
 	          			<li><%= link_to "Prices", "#" %></li>
 	          		</ul>
 	           	</li>
+
+	           	<li>
+					<%= link_to "Suppliers", "#" %>
+				</li>
 
 				<li>
 					<%= link_to "Log out", logout_path %>
