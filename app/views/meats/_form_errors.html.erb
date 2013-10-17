@@ -1,0 +1,11 @@
+<%if @meat.errors.any? %>
+    <div class="alert alert-danger fade in">
+	    	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	      	The form contains <%= pluralize(@meat.errors.count, "error") %>.
+		<ul style="margin-top:5px;">
+		<% @meat.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+		</ul>
+	</div>
+<% end %>

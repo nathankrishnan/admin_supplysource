@@ -10,6 +10,7 @@ class MeatsController < ApplicationController
 		@meat = Meat.new(meat_params)
 
 		if(@meat.save)
+			flash[:success] = "Successfully added a product"
 			redirect_to @meat
 		else
 			render 'new'
