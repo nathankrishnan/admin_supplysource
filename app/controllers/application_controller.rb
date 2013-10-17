@@ -12,7 +12,8 @@ private
 
 	def signed_in_user
 		unless !current_user.nil?
-			redirect_to login_url, notice: "Please sign in."
+			flash[:danger] = "Please sign in."
+			redirect_to login_url
 		end
 	end
 
