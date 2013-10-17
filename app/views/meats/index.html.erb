@@ -9,6 +9,7 @@
     <th>Supplier</th>
     <th>Anti-Biotic Free</th>
     <th>Hormone Free</th>
+    <th>Scan Count</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,6 +22,7 @@
       <td><%= meat.supplier.name %></td>
       <td><%= meat.ab_free %></td>
       <td><%= meat.hormone_free %></td>
+      <td><%= meat.scancount %></td>
       <td><%= link_to 'Show', meat_path(meat.id) %></td>
       <td><%= link_to 'Edit', edit_meat_path(meat.id) %></td>
       <td><%= link_to 'Delete', meat_path(meat.id),

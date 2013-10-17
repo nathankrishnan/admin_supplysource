@@ -8,4 +8,9 @@
   <%= @meat.description %>
 </p>
 
+<p>
+  <strong>Scan Count:</strong>
+  <%= @meat.scancount %>
+</p>
+
 <%= image_tag("https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=#{@meat.id}&choe=UTF-8") %>

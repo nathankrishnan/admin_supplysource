@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131016233527) do
+ActiveRecord::Schema.define(version: 20131017190349) do
 
   create_table "meats", force: true do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20131016233527) do
     t.text     "growth_conditions"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "scancount"
   end
 
   create_table "suppliers", force: true do |t|
