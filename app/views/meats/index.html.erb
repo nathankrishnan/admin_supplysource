@@ -1,15 +1,30 @@
-<h1>Listing meats</h1>
+<h1>Listing Meat</h1>
+
+<%= link_to "Add Product", new_meat_path %>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Description</th>
+    <th>Supplier</th>
+    <th>Anti-Biotic Free</th>
+    <th>Hormone Free</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
  
   <% @meats.each do |meat| %>
     <tr>
       <td><%= meat.name %></td>
       <td><%= meat.description %></td>
+      <td><%= meat.supplier.name %></td>
+      <td><%= meat.ab_free %></td>
+      <td><%= meat.hormone_free %></td>
+      <td><%= link_to 'Show', meat_path(meat.id) %></td>
+      <td><%= link_to 'Edit', edit_meat_path(meat.id) %></td>
+      <td><%= link_to 'Delete', meat_path(meat.id),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>

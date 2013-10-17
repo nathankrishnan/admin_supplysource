@@ -1,0 +1,109 @@
+<%= form_for @meat do |f| %>
+
+	<%if @meat.errors.any? %>
+		<div>
+			<h2><%= pluralize(@meat.errors.count, "error")%></h2>
+			<ul>
+			<% @meat.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+
+	<fieldset>
+		<legend><%=@meat.name%></legend>
+
+		<!-- NAME -->
+		<div class="form-group">
+			<%= f.label :name, class: "col-lg-2 control-label" %>
+			<div class="col-lg-10">
+				<%= f.text_field :name, class: "form-control", placeholder: "Enter product name" %>
+			</div>
+		</div>
+
+
+		<!-- SUPPLIER -->
+		<div class="form-group">
+			<%= f.label :supplier_id, class: "col-lg-2 control-label" %>
+			<div class="col-lg-10">
+				<%= f.collection_select :supplier_id, Supplier.all, :id, :name, include_blank: true %>
+			</div>
+		</div>
+
+		<!-- THUMBNAIL -->
+		<div class="form-group">
+			<%= f.label :thumbnail, class: "col-lg-2 control-label" %>
+			<div class="col-lg-10">
+				<%= f.file_field :thumbnail, class: "file-upload" %>
+			</div>
+		</div>
+
+		<div class="form-group">
+
+			<!-- ANTIBIOTIC FREE -->
+			<div class="col-lg-offset-2 col-lg-10">
+				<div class="checkbox">
+					<%= f.label :ab_free, class: "col-lg-2 control-label" %>
+					<%= f.check_box :ab_free %>
+				</div>
+			</div>
+
+			<!-- HORMONE FREE -->
+			<div class="col-lg-offset-2 col-lg-10">
+				<div class="checkbox">
+					<%= f.label :hormone_free, class: "col-lg-2 control-label" %>
+					<%= f.check_box :hormone_free %>
+				</div>
+			</div>
+
+			<!-- WILD CAUGHT -->
+			<div class="col-lg-offset-2 col-lg-10">
+				<div class="checkbox">
+					<%= f.label :wild_caught, class: "col-lg-2 control-label" %>
+					<%= f.check_box :wild_caught %>
+				</div>
+			</div>
+
+			<!-- FARM GROWN -->
+			<div class="col-lg-offset-2 col-lg-10">
+				<div class="checkbox">
+					<%= f.label :farm_grown, class: "col-lg-2 control-label" %>
+					<%= f.check_box :farm_grown %>
+				</div>
+			</div>
+
+			<!-- ARTIFICIAL COLOR -->
+			<div class="col-lg-offset-2 col-lg-10">
+				<div class="checkbox">
+					<%= f.label :artificial_color, class: "col-lg-2 control-label" %>
+					<%= f.check_box :artificial_color %>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- DESCRIPTION -->
+		<div class="form-group">
+			<%= f.label :description, class: "col-lg-2 control-label" %>
+			<div class="col-lg-10">
+				<%= f.text_area :description, rows: 3, class: "form-control" %>
+			</div>
+		</div>
+
+		<!-- GROWTH CONDITIONS -->
+		<div class="form-group">
+			<%= f.label :growth_conditions, class: "col-lg-2 control-label" %>
+			<div class="col-lg-10">
+				<%= f.text_area :growth_conditions, rows: 3, class: "form-control" %>
+			</div>
+		</div>
+
+
+		<%= f.submit "Submit", class: "btn btn-lg btn-default" %>
+
+	</fieldset>
+
+<% end %>
+

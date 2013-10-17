@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131015053953) do
+ActiveRecord::Schema.define(version: 20131016233527) do
 
   create_table "meats", force: true do |t|
     t.string   "name"
-    t.integer  "supplier_name"
+    t.integer  "supplier_id"
     t.string   "thumbnail"
     t.boolean  "ab_free"
     t.boolean  "hormone_free"
@@ -24,6 +24,12 @@ ActiveRecord::Schema.define(version: 20131015053953) do
     t.boolean  "artificial_color"
     t.text     "description"
     t.text     "growth_conditions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "suppliers", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
