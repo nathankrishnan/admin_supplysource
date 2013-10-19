@@ -24,6 +24,7 @@ SupplySource Dashboard
 4) Image Upload
 
 		http://www.takadevelop.com/2013/07/09/uploading-image-with-paperclip-amazon-s3-heroku-and-rails/
+		https://devcenter.heroku.com/articles/paperclip-s3
 
 5) Connect to App
 
