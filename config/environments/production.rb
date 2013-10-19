@@ -77,4 +77,16 @@ AdminSupplysource::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+
+  config.paperclip_defaults = {
+    :storage =&gt; :s3,
+    :s3_credentials =&gt; {
+      :bucket =&gt; ENV['AWS_BUCKET'],
+      :access_key_id =&gt; ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key =&gt; ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
+
+  
 end

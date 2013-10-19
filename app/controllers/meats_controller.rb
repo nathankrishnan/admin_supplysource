@@ -55,7 +55,7 @@ class MeatsController < ApplicationController
 	private
 
 		def meat_params
-			params.require(:meat).permit(:name, :supplier_id, :thumbnail, :ab_free, :hormone_free, :wild_caught, :farm_grown, :artificial_color, :description, :growth_conditions)
+			params.require(:meat).permit(:name, :supplier_id, :image, :ab_free, :hormone_free, :wild_caught, :farm_grown, :artificial_color, :description, :growth_conditions)
 		end
 
 end

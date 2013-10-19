@@ -4,11 +4,16 @@ class Meat < ActiveRecord::Base
 
 	belongs_to :supplier
 
+	has_attached_file :image
+
 	validates :name, presence: true
 	validates :supplier_id, presence: true
 
-	def set_scancount
-		self.scancount ||= 0
-	end
+
+	private
+
+		def set_scancount
+			self.scancount ||= 0
+		end
 
 end
