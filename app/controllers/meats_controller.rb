@@ -51,6 +51,11 @@ class MeatsController < ApplicationController
 		redirect_to meats_path
 	end
 
+	# render a jsonp response
+	def renderJson
+		@meats = Meat.all
+		render :json => @meats.to_json, :callback => params[:callback]
+	end
 
 	private
 

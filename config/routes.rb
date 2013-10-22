@@ -12,4 +12,6 @@ AdminSupplysource::Application.routes.draw do
   match '/login', to: 'sessions#new', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'get'
 
+  match '/renderjson', to: 'meats#renderJson', via: 'get'
+
 end
