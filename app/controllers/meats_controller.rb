@@ -53,8 +53,9 @@ class MeatsController < ApplicationController
 
 	# render a jsonp response
 	def renderJson
-		@meats = Meat.all
-		render :json => @meats.to_json, :callback => params[:callback]
+		@meat = Meat.find(params[:id])
+		render :json => @meat.to_json
+		#:callback => params[:callback]
 	end
 
 	private
