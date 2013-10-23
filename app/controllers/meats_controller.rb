@@ -1,6 +1,6 @@
 class MeatsController < ApplicationController
 
-	before_action :signed_in_user only: [:new, :create, :show, :index, :edit, :update, :destroy]
+	before_action :signed_in_user, only: [:new, :create, :show, :index, :edit, :update, :destroy]
 
 	def new
 		@meat = Meat.new
