@@ -11,7 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131028175835) do
+ActiveRecord::Schema.define(version: 20131028232620) do
+
+  create_table "flags", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "product1_id"
+    t.integer  "product2_id"
+    t.integer  "product3_id"
+    t.integer  "product4_id"
+    t.integer  "product5_id"
+    t.integer  "product6_id"
+    t.integer  "product7_id"
+    t.integer  "product8_id"
+    t.integer  "product9_id"
+    t.integer  "product10_id"
+    t.integer  "product11_id"
+    t.integer  "product12_id"
+    t.integer  "product13_id"
+    t.integer  "product14_id"
+    t.integer  "product15_id"
+    t.integer  "product16_id"
+    t.integer  "product17_id"
+    t.integer  "product18_id"
+    t.integer  "product19_id"
+    t.integer  "product20_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "products", force: true do |t|
     t.string   "name"
@@ -31,6 +58,48 @@ ActiveRecord::Schema.define(version: 20131028175835) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "recipes", force: true do |t|
+    t.string   "name"
+    t.integer  "calories"
+    t.integer  "protein"
+    t.integer  "carbs"
+    t.integer  "ingredient1_id"
+    t.integer  "ingredient2_id"
+    t.integer  "ingredient3_id"
+    t.integer  "ingredient4_id"
+    t.integer  "ingredient5_id"
+    t.integer  "ingredient6_id"
+    t.integer  "ingredient7_id"
+    t.integer  "ingredient8_id"
+    t.integer  "ingredient9_id"
+    t.integer  "ingredient10_id"
+    t.integer  "ingredient11_id"
+    t.integer  "ingredient12_id"
+    t.integer  "ingredient13_id"
+    t.integer  "ingredient14_id"
+    t.integer  "ingredient15_id"
+    t.integer  "ingredient16_id"
+    t.integer  "ingredient17_id"
+    t.integer  "ingredient18_id"
+    t.integer  "ingredient19_id"
+    t.integer  "ingredient20_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tracks", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "calorie_max"
+    t.integer  "calorie_min"
+    t.integer  "carb_max"
+    t.integer  "carb_min"
+    t.integer  "fat_max"
+    t.integer  "fat_min"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
