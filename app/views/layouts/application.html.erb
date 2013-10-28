@@ -28,12 +28,7 @@
           	<% if current_user %>
 
 	          	<li>
-	          		<%= link_to "#", class: "dropdown-toggle", data:{toggle: "dropdown"}  do%>Products <b class="caret"></b><%end%>
-	          		<ul>
-	          			<li><%= link_to "Meat", meats_path %></li>
-	          			<li><%= link_to "Produce", "#" %></li>
-	          			<li><%= link_to "Dairy", "#" %></li>
-	          		</ul>
+	          		<%= link_to "Products", products_path %>		
 	          	</li>
 
 	           	<li>

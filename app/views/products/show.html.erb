@@ -1,0 +1,26 @@
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+ 
+<%= image_tag @product.image.url %>
+
+<p>
+  <strong>Category:</strong>
+  <%= @product.category %>
+</p>
+
+<p>
+  <strong>Track 1 Scan Count:</strong>
+  <%= @product.track1_scancount %>
+</p>
+<p>
+  <strong>Track 2 Scan Count:</strong>
+  <%= @product.track2_scancount %>
+</p>
+<p>
+  <strong>Track 3 Scan Count:</strong>
+  <%= @product.track3_scancount %>
+</p>
+
+<%= image_tag("https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=#{@product.id}&choe=UTF-8") %>

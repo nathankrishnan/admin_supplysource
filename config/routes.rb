@@ -2,7 +2,7 @@ AdminSupplysource::Application.routes.draw do
   
   resources :users
   resources :sessions
-  resources :meats
+  resources :products
 
   # set a root path
   root "static_pages#home"
@@ -12,6 +12,6 @@ AdminSupplysource::Application.routes.draw do
   match '/login', to: 'sessions#new', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'get'
 
-  match '/renderjson/:id', to: 'meats#renderJson', via: 'get'
+  match '/renderjson/:id', to: 'products#renderJson', via: 'get'
 
 end

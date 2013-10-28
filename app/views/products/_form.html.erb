@@ -1,0 +1,75 @@
+<div class="col-md-8 col-md-offset-2">
+
+	<%= form_for @product do |f| %>
+		
+		<fieldset>
+			<legend><%=@product.name%></legend>
+
+			<!-- NAME -->
+			<div class="form-block">
+				<%= f.label :name %>
+					<%= f.text_field :name, class: "form-control", placeholder: "Enter product name" %>
+			</div>
+
+			<!-- PRICE -->
+			<div class="form-block">
+				<%= f.label :price %>
+					<%= f.text_field :price, class: "form-control", placeholder: "Enter a price" %>
+			</div>
+
+			<!-- CATEGORY -->
+			<div class="form-block">
+				<%= f.label :category %>
+					<%= f.text_field :category, class: "form-control", placeholder: "Enter a category" %>
+			</div>
+
+			<!-- IMAGE -->
+			<div class="form-block">
+				<%= f.label :image %>
+					<%= f.file_field :image, class: "file-upload" %>
+			</div>
+
+			<!-- CALORIES -->
+			<div class="form-block">
+				<%= f.label :calories %>
+					<%= f.text_field :calories, class: "form-control", placeholder: "Enter product calories" %>
+			</div>
+
+			<!-- CARBS -->
+			<div class="form-block">
+				<%= f.label :carbs %>
+					<%= f.text_field :carbs, class: "form-control", placeholder: "Enter carbs content" %>
+			</div>
+
+			<!-- PROTEIN -->
+			<div class="form-block">
+				<%= f.label :protein %>
+					<%= f.text_field :protein, class: "form-control", placeholder: "Enter protein content" %>
+			</div>
+
+			<div class="form-block">
+
+				<!-- PACKAGED? -->
+					<div class="checkbox">
+						<%= f.label :packaged %>
+						<%= f.check_box :packaged %>
+					</div>
+
+				<!-- GLUTEN? -->
+					<div class="checkbox">
+						<%= f.label :gluten %>
+						<%= f.check_box :gluten %>
+					</div>
+
+			</div>
+
+			<div class="form-block">
+					<%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
+			</div>
+		
+		</fieldset>
+
+	<% end %>
+
+</div>
+

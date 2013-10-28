@@ -11,32 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019073631) do
+ActiveRecord::Schema.define(version: 20131028175835) do
 
-  create_table "meats", force: true do |t|
+  create_table "products", force: true do |t|
     t.string   "name"
-    t.integer  "supplier_id"
-    t.string   "thumbnail"
-    t.boolean  "ab_free"
-    t.boolean  "hormone_free"
-    t.boolean  "wild_caught"
-    t.boolean  "farm_grown"
-    t.boolean  "artificial_color"
-    t.text     "description"
-    t.text     "growth_conditions"
+    t.float    "price"
+    t.string   "category"
+    t.integer  "track1_scancount"
+    t.integer  "track2_scancount"
+    t.integer  "track3_scancount"
+    t.boolean  "packaged"
+    t.integer  "calories"
+    t.integer  "protein"
+    t.integer  "carbs"
+    t.boolean  "gluten"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "scancount"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-  end
-
-  create_table "suppliers", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

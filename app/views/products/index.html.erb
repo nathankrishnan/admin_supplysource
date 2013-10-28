@@ -1,0 +1,32 @@
+<h1>Listing Products</h1>
+
+<%= link_to "Add Product", new_product_path %>
+
+<table class="tablestyle">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>Calories</th>
+    <th>Gluten?</th>
+    <th>Packaged?</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.price %></td>
+      <td><%= product.category %></td>
+      <td><%= product.calories %></td>
+      <td><%= product.gluten %></td>
+      <td><%= product.packaged %></td>
+      <td><%= link_to 'Show', product_path(product.id) %></td>
+      <td><%= link_to 'Edit', edit_product_path(product.id) %></td>
+      <td><%= link_to 'Delete', product_path(product.id),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
