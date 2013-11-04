@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131028232620) do
+ActiveRecord::Schema.define(version: 20131031065756) do
 
   create_table "flags", force: true do |t|
     t.string   "name"
@@ -105,6 +105,22 @@ ActiveRecord::Schema.define(version: 20131028232620) do
     t.integer  "ingredient18_id"
     t.integer  "ingredient19_id"
     t.integer  "ingredient20_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shoppers", force: true do |t|
+    t.string   "email"
+    t.string   "password_hash"
+    t.integer  "track"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "gender"
+    t.integer  "flag_1"
+    t.integer  "flag_2"
+    t.integer  "flag_3"
+    t.integer  "flag_4"
+    t.integer  "flag_5"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

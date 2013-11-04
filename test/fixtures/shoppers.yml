@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  password_hash: MyString
+  track: 1
+  first_name: MyString
+  last_name: MyString
+  gender: 1
+  flag_1: 1
+  flag_2: 1
+  flag_3: 1
+  flag_4: 1
+  flag_5: 1
+
+two:
+  email: MyString
+  password_hash: MyString
+  track: 1
+  first_name: MyString
+  last_name: MyString
+  gender: 1
+  flag_1: 1
+  flag_2: 1
+  flag_3: 1
+  flag_4: 1
+  flag_5: 1

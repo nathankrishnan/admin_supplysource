@@ -14,4 +14,9 @@ AdminSupplysource::Application.routes.draw do
 
   match '/renderjson/:id', to: 'products#renderJson', via: 'get'
 
+  # ShopperSessions routes
+  match '/shopper_sign_up', to: 'shopper_sessions#create', via: 'post'
+
 end
+
+
